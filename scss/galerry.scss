@@ -1,0 +1,162 @@
+$color_1: #9f9f9f;
+$color_2: lightblue;
+$color_3: #fff;
+$color_4: black;
+$font_family_1: 'Merriweather', serif;
+$background_color_1: #000;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: $font_family_1;
+  margin: 0 auto;
+  color: $color_1;
+}
+.wide {
+  width: 100%;
+}
+.center {
+  width: 1100px;
+  margin: 0 auto;
+}
+button {
+  border: none;
+  background-image: linear-gradient(#fff, #AF4034);
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: $background_color_1;
+    -webkit-transform: scale(0.95, 0.95);
+    -ms-transform: scale(0.95, 0.95);
+    transform: scale(0.95, 0.95);
+    cursor: pointer;
+  }
+  a {
+    color: $color_4;
+    text-decoration: none;
+  }
+}
+nav {
+  height: 50px;
+  background-image: linear-gradient(#AF4034, #fff);
+  font-size: 14px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: $color_3;
+  p {
+    float: left;
+  }
+  span {
+    font-weight: bold;
+    color: $color_2;
+  }
+  a {
+    text-decoration: none;
+    color: $color_3;
+  }
+  li {
+    float: right;
+    list-style-type: none;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    a {
+      &:hover {
+        color: $color_4;
+      }
+    }
+  }
+}
+.header_right {
+  span {
+    font-weight: bold;
+    color: $color_2;
+  }
+}
+.submenu {
+  ul {
+    ul {
+      li {
+        padding: 0 0 10px 0;
+        text-align: center;
+      }
+    }
+    li {
+      ul {
+        display: none;
+        position: absolute;
+        top: 20px;
+        width: 100px;
+        background-image: linear-gradient(#fff, #AF4034);
+        border-radius: 5px;
+        z-index: 1;
+      }
+    }
+  }
+}
+div.gallery {
+  border: 1px solid white;
+  &:hover {
+    border: 1px solid #777;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+footer {
+  height: 100px;
+  p {
+    padding-top: 17px;
+    float: left;
+  }
+  ul {
+    list-style-type: none;
+    float: right;
+    li {
+      display: inline-block;
+    }
+  }
+  li {
+    &:nth-child(5) {
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+.twitter {
+  margin-right: 60px;
+}
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
